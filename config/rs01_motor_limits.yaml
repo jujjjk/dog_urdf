@@ -1,0 +1,38 @@
+# RS01 output-side limits from RS01使用说明书260112.pdf.
+# This file records limits only; it intentionally does not choose Kp/Kd gains.
+rs01:
+  rated_voltage_v: 36.0
+  voltage_range_v: [24.0, 50.0]
+  rated_output_torque_nm: 6.0
+  peak_output_torque_nm: 17.0
+  no_load_speed_rpm: 315.0
+  no_load_speed_rad_s: 32.9867
+  reduction_ratio: 7.75
+
+  can:
+    bitrate: 1000000
+    frame: extended
+
+  motor_mode:
+    control_law: "t_ref = kd * (v_set - v_actual) + kp * (p_set - p_actual) + t_ff"
+    position_encoding_rad: [-12.57, 12.57]
+    velocity_encoding_rad_s: [-44.0, 44.0]
+    torque_encoding_nm: [-17.0, 17.0]
+    kp_range: [0.0, 500.0]
+    kd_range: [0.0, 5.0]
+
+# Mechanical ranges are narrower than the RS01 protocol encoding range.
+joint_limits:
+  hip:
+    lower_rad: -1.0472
+    upper_rad: 1.0472
+  thigh:
+    lower_rad: -2.76228694714
+    upper_rad: 2.29921305286
+  calf:
+    lower_rad: 0.0
+    upper_rad: 1.91986217719
+  all_actuated_joints:
+    urdf_peak_effort_nm: 17.0
+    urdf_velocity_rad_s: 32.9867
+    continuous_output_torque_nm: 6.0

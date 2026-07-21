@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDFzhuangpei.SLDASM">
+  <link
+    name="Trunk">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 8.5737812821618E-09 -0.00740652207451296"
+        rpy="0 0 0" />
+      <mass
+        value="4.35129728273739" />
+      <inertia
+        ixx="0.00835966545666836"
+        ixy="-3.47039283298407E-19"
+        ixz="3.43313041434009E-20"
+        iyy="0.00753671673905145"
+        iyz="-2.65972678156287E-12"
+        izz="0.0116967149678238" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/Trunk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/Trunk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FR_hip_joint">
+    <inertial>
+      <origin
+        xyz="-0.00532401828110732 0.016432823313553 -0.000137910407853326"
+        rpy="0 0 0" />
+      <mass
+        value="0.682634208082644" />
+      <inertia
+        ixx="0.000411258787886944"
+        ixy="-3.85301823459196E-05"
+        ixz="-2.26757896160964E-05"
+        iyy="0.000604914801567141"
+        iyz="2.40178641711307E-06"
+        izz="0.000412764445760128" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_hip_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_hip_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.216 -0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="FR_hip_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FR_thigh_joint">
+    <inertial>
+      <origin
+        xyz="-0.0166323441022026 0.0262992714821007 -0.00457223701727334"
+        rpy="0 0 0" />
+      <mass
+        value="0.872150153156901" />
+      <inertia
+        ixx="0.000623997084767276"
+        ixy="1.024566037419E-05"
+        ixz="-0.000259741027875287"
+        iyy="0.00146418737886834"
+        iyz="6.58638014586912E-06"
+        izz="0.00104021658380157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_thigh_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_thigh_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.08725 0"
+      rpy="0 0 0" />
+    <parent
+      link="FR_hip_joint" />
+    <child
+      link="FR_thigh_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FR_calf_joint">
+    <inertial>
+      <origin
+        xyz="0.11066671417923 0.000261048395910457 0.0191703809225944"
+        rpy="0 0 0" />
+      <mass
+        value="0.234042505684366" />
+      <inertia
+        ixx="6.0426970880189E-05"
+        ixy="3.51389344927064E-07"
+        ixz="-9.79025974146265E-05"
+        iyy="0.000996435189109907"
+        iyz="4.13662250224613E-08"
+        izz="0.000960294329624096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_calf_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FR_calf_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1557 0 -0.090323"
+      rpy="0 0 0" />
+    <parent
+      link="FR_thigh_joint" />
+    <child
+      link="FR_calf_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL_hip_joint">
+    <inertial>
+      <origin
+        xyz="-0.00532401828110737 -0.0164328233135531 0.00013791040785331"
+        rpy="0 0 0" />
+      <mass
+        value="0.682634208082644" />
+      <inertia
+        ixx="0.000411258787886944"
+        ixy="3.85301823459194E-05"
+        ixz="2.26757896160967E-05"
+        iyy="0.000604914801567141"
+        iyz="2.4017864171131E-06"
+        izz="0.000412764445760128" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_hip_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_hip_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.216 0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="FL_hip_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL_thigh_joint">
+    <inertial>
+      <origin
+        xyz="-0.0166323661813786 -0.0262992533325682 -0.00457220274595862"
+        rpy="0 0 0" />
+      <mass
+        value="0.872150809470834" />
+      <inertia
+        ixx="0.000623999555954995"
+        ixy="-1.02454718618294E-05"
+        ixz="-0.000259740988701668"
+        iyy="0.00146418844969497"
+        iyz="-6.58657491999757E-06"
+        izz="0.00104021522725969" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_thigh_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_thigh_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.08725 0"
+      rpy="0 0 0" />
+    <parent
+      link="FL_hip_joint" />
+    <child
+      link="FL_thigh_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FL_calf_joint">
+    <inertial>
+      <origin
+        xyz="0.110666489734434 -0.000261064891474316 0.019170320338883"
+        rpy="0 0 0" />
+      <mass
+        value="0.23404332064939" />
+      <inertia
+        ixx="6.04274233573339E-05"
+        ixy="-3.51918058765144E-07"
+        ixz="-9.79034593990447E-05"
+        iyy="0.000996438811866361"
+        iyz="-4.14577881535261E-08"
+        izz="0.000960297794186572" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_calf_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.780392156862745 0.780392156862745 0.780392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/FL_calf_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="-0.155697793236241 0 -0.0903227390049967"
+      rpy="0 0 0" />
+    <parent
+      link="FL_thigh_joint" />
+    <child
+      link="FL_calf_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR_hip_joint">
+    <inertial>
+      <origin
+        xyz="0.00532401828110859 0.0164328233135523 0.000137910407853591"
+        rpy="0 0 0" />
+      <mass
+        value="0.682634208082661" />
+      <inertia
+        ixx="0.000411258787886957"
+        ixy="3.85301823459269E-05"
+        ixz="-2.26757896161012E-05"
+        iyy="0.000604914801567151"
+        iyz="-2.40178641710737E-06"
+        izz="0.000412764445760143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_hip_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_hip_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.216 -0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="RR_hip_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR_thigh_joint">
+    <inertial>
+      <origin
+        xyz="-0.0166323448325756 0.0262992714895327 -0.00457225934791996"
+        rpy="0 0 0" />
+      <mass
+        value="0.872150152908066" />
+      <inertia
+        ixx="0.000623997001318092"
+        ixy="1.02456614317439E-05"
+        ixz="-0.000259740961038513"
+        iyy="0.00146418737883182"
+        iyz="6.58637850057426E-06"
+        izz="0.00104021666721175" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_thigh_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_thigh_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.08725 0"
+      rpy="0 0 0" />
+    <parent
+      link="RR_hip_joint" />
+    <child
+      link="RR_thigh_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RR_calf_joint">
+    <inertial>
+      <origin
+        xyz="0.110666699676146 0.000261048395912789 0.0191704059225941"
+        rpy="0 0 0" />
+      <mass
+        value="0.234042505684366" />
+      <inertia
+        ixx="6.04269708802058E-05"
+        ixy="3.51389344927138E-07"
+        ixz="-9.79025974146227E-05"
+        iyy="0.000996435189109927"
+        iyz="4.13662250225364E-08"
+        izz="0.000960294329624099" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_calf_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RR_calf_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_calf_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1557 0 -0.090323"
+      rpy="0 0 0" />
+    <parent
+      link="RR_thigh_joint" />
+    <child
+      link="RR_calf_joint" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RL_hip_joint">
+    <inertial>
+      <origin
+        xyz="0.00532401828110871 -0.0164328233135523 -0.000137910407853593"
+        rpy="0 0 0" />
+      <mass
+        value="0.682634208082662" />
+      <inertia
+        ixx="0.000411258787886958"
+        ixy="-3.85301823459268E-05"
+        ixz="2.26757896161008E-05"
+        iyy="0.000604914801567152"
+        iyz="-2.40178641710737E-06"
+        izz="0.000412764445760144" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_hip_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_hip_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.216 0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="RL_hip_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RL_thigh_joint">
+    <inertial>
+      <origin
+        xyz="-0.0166323669155268 -0.0262992533325675 -0.00457220007533216"
+        rpy="0 0 0" />
+      <mass
+        value="0.872150809470864" />
+      <inertia
+        ixx="0.000623999472542905"
+        ixy="-1.02454729194276E-05"
+        ixz="-0.000259740921870824"
+        iyy="0.00146418844969505"
+        iyz="-6.5865732749061E-06"
+        izz="0.00104021531067186" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_thigh_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_thigh_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.08725 0"
+      rpy="0 0 0" />
+    <parent
+      link="RL_hip_joint" />
+    <child
+      link="RL_thigh_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RL_calf_joint">
+    <inertial>
+      <origin
+        xyz="0.11066647523135 -0.000261064891476537 0.0191703453388829"
+        rpy="0 0 0" />
+      <mass
+        value="0.23404332064939" />
+      <inertia
+        ixx="6.04274233573363E-05"
+        ixy="-3.5191805876502E-07"
+        ixz="-9.79034593990478E-05"
+        iyy="0.000996438811866367"
+        iyz="-4.14577881534998E-08"
+        izz="0.000960297794186575" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_calf_joint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.780392156862745 0.780392156862745 0.780392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/RL_calf_joint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RL_calf_joint"
+    type="revolute">
+    <origin
+      xyz="-0.1557 0 -0.090323"
+      rpy="0 0 0" />
+    <parent
+      link="RL_thigh_joint" />
+    <child
+      link="RL_calf_joint" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="imu_Link">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 1.38777878078145E-17 0.000999999999999997"
+        rpy="0 0 0" />
+      <mass
+        value="0.0012" />
+      <inertia
+        ixx="4.04E-08"
+        ixy="-2.4230591536767E-23"
+        ixz="-1.08420217248549E-25"
+        iyy="9.04E-08"
+        iyz="-2.20581496680804E-25"
+        izz="1.3E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/imu_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDFzhuangpei.SLDASM/meshes/imu_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_Link"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0255"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="imu_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
