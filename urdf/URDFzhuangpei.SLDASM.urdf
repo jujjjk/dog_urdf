@@ -4,9 +4,8 @@
      and foot contact spheres from the refined dog_urdf model.
      CAD joint origins (zero pose) and visual meshes are preserved from the
      new SolidWorks export. Thigh/calf collision primitives and foot offsets
-     were rotated about Y to match the new link frames. Hip axes are set to
-     1 0 0 (abduction). Thigh/calf axes follow the new export; their limit
-     signs are flipped when an axis is anti-parallel to the refined model.
+     were rotated about Y to match the new link frames. All revolute joint
+     axes match the refined desktop model: hip 1 0 0, thigh/calf 0 1 0.
      Effort=17 N.m (RS01 peak), velocity=32.9867 rad/s. -->
 <robot name="URDFzhuangpei.SLDASM">
   <material name="foot_rubber">
@@ -107,8 +106,8 @@
     <origin xyz="0 -0.08725 0" rpy="0 0 0" />
     <parent link="FR_hip_joint" />
     <child link="FR_thigh_joint" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-2.29921305286" upper="2.76228694714" effort="17" velocity="32.9867" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.76228694714" upper="2.29921305286" effort="17" velocity="32.9867" />
   </joint>
   <link name="FR_calf_joint">
     <inertial>
@@ -154,8 +153,8 @@
     <origin xyz="-0.1557 0 -0.090323" rpy="0 0 0" />
     <parent link="FR_thigh_joint" />
     <child link="FR_calf_joint" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-1.91986217719" upper="0" effort="17" velocity="32.9867" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="1.91986217719" effort="17" velocity="32.9867" />
   </joint>
   <link name="FR_foot">
     <inertial>
@@ -379,8 +378,8 @@
     <origin xyz="0 -0.08725 0" rpy="0 0 0" />
     <parent link="RR_hip_joint" />
     <child link="RR_thigh_joint" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-2.29921305286" upper="2.76228694714" effort="17" velocity="32.9867" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.76228694714" upper="2.29921305286" effort="17" velocity="32.9867" />
   </joint>
   <link name="RR_calf_joint">
     <inertial>
@@ -426,8 +425,8 @@
     <origin xyz="-0.1557 0 -0.090323" rpy="0 0 0" />
     <parent link="RR_thigh_joint" />
     <child link="RR_calf_joint" />
-    <axis xyz="0 -1 0" />
-    <limit lower="-1.91986217719" upper="0" effort="17" velocity="32.9867" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="1.91986217719" effort="17" velocity="32.9867" />
   </joint>
   <link name="RR_foot">
     <inertial>
